@@ -7,7 +7,6 @@ const replied = (message, { stdout, stdin }) => new Promise(resolve => {
 	stdin.once("data", data => {
 		resolve(data)
 		stdin.setRawMode(false)
-		stdin.destroy()
 	})
 
 	stdout.write(message)
